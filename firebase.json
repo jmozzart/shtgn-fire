@@ -1,8 +1,8 @@
 {
   "hosting": {
-	"site": "comicool",
+    "site": "comicool",
     "public": "public",
-	"cleanUrls": true,
+    "cleanUrls": true,
     "ignore": [
       "firebase.json",
       "**/.*",
