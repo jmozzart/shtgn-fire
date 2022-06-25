@@ -1,0 +1,106 @@
+
+F12::
+Sleep 1000
+	
+Loop, read, productDB.txt
+			
+	{
+	
+			Column1 := StrSplit(A_LoopReadLine, A_Tab).1
+			Column2 := StrSplit(A_LoopReadLine, A_Tab).2
+			Column3 := StrSplit(A_LoopReadLine, A_Tab).3
+			Column4 := StrSplit(A_LoopReadLine, A_Tab).4
+			Column5 := StrSplit(A_LoopReadLine, A_Tab).5
+			Column6 := StrSplit(A_LoopReadLine, A_Tab).6
+			Column7 := StrSplit(A_LoopReadLine, A_Tab).7
+			Column8 := StrSplit(A_LoopReadLine, A_Tab).8
+			Column9 := StrSplit(A_LoopReadLine, A_Tab).9
+			Column10 := StrSplit(A_LoopReadLine, A_Tab).10
+			Column11 := StrSplit(A_LoopReadLine, A_Tab).11
+			Column12 := StrSplit(A_LoopReadLine, A_Tab).12
+			Column13 := StrSplit(A_LoopReadLine, A_Tab).13
+			Column14 := StrSplit(A_LoopReadLine, A_Tab).14
+			Column15 := StrSplit(A_LoopReadLine, A_Tab).15
+			Column16 := StrSplit(A_LoopReadLine, A_Tab).16
+			Column17 := StrSplit(A_LoopReadLine, A_Tab).17
+			Column18 := StrSplit(A_LoopReadLine, A_Tab).18
+			Column19 := StrSplit(A_LoopReadLine, A_Tab).19
+			Column20 := StrSplit(A_LoopReadLine, A_Tab).20
+			Column21 := StrSplit(A_LoopReadLine, A_Tab).21
+			Column22 := StrSplit(A_LoopReadLine, A_Tab).22
+			Column23 := StrSplit(A_LoopReadLine, A_Tab).23
+			Column24 := StrSplit(A_LoopReadLine, A_Tab).24
+			Column25 := StrSplit(A_LoopReadLine, A_Tab).25
+			Column26 := StrSplit(A_LoopReadLine, A_Tab).26
+			Column27 := StrSplit(A_LoopReadLine, A_Tab).27
+			Column28 := StrSplit(A_LoopReadLine, A_Tab).28
+
+			FileRead, RawContent, template.txt
+
+			StringReplace, ColxA, RawContent, productID, %Column1%, All
+			StringReplace, ColxB, ColxA, seodescription, %Column2%, All
+			StringReplace, ColxC, ColxB, seokeywords, %Column3%, All
+			StringReplace, ColxD, ColxC, PageTitle, %Column4%, All
+			;StringReplace, ColxE, ColxD, No of images, %Column5%, All
+			StringReplace, ColxF, ColxD, rplcproductimgs, %Column6%, All
+			StringReplace, ColxG, ColxF, rplcproductsliders, %Column7%, All
+			StringReplace, ColxH, ColxG, ProductTitle, %Column8%, All
+			StringReplace, ColxI, ColxH, defaultcurrentprice, %Column9%, All
+			StringReplace, ColxJ, ColxI, defaultorigprice, %Column10%, All
+			StringReplace, ColxK, ColxJ, productsummary, %Column11%, All
+			StringReplace, ColxL, ColxK, rplc1stvariant, %Column12%, All
+			StringReplace, ColxM, ColxL, rplc1stvariantbtns, %Column13%, All
+			StringReplace, ColxN, ColxM, rplcdataitemprice, %Column14%, All
+			StringReplace, ColxO, ColxN, rplcdataitemid, %Column15%, All
+			StringReplace, ColxP, ColxO, rplcdataitemurl, %Column16%, All
+			StringReplace, ColxQ, ColxP, rplcdataitemimage, %Column17%, All
+			StringReplace, ColxR, ColxQ, rplcdataitemname, %Column18%, All
+			StringReplace, ColxS, ColxR, rplcdataitemweight, %Column19%, All
+			StringReplace, ColxT, ColxS, rplcdataitemcustom1name, %Column20%, All
+			StringReplace, ColxU, ColxT, rplcdataitemcustom1options, %Column21%, All
+			StringReplace, ColxV, ColxU, rplclazadalink, %Column22%, All
+			StringReplace, ColxW, ColxV, rplcshopeelink, %Column23%, All
+			StringReplace, ColxX, ColxW, rplcshortdescription, %Column24%, All
+			StringReplace, ColxY, ColxX, rplclongdescription, %Column25%, All
+			StringReplace, ColxZ, ColxY, productsequence.js, %Column26%, All
+			StringReplace, ColxA1, ColxZ, reviewppdata.js, %Column27%, All
+			
+			FileDelete, %Column28%.html
+			FileAppend, %ColxA1%, %Column28%.html
+			RawContent := ""
+			ColxA := ""
+			ColxB := ""
+			ColxC := ""
+			ColxD := ""
+			ColxE := ""
+			ColxF := ""
+			ColxG := ""
+			ColxH := ""
+			ColxI := ""
+			ColxJ := ""
+			ColxK := ""
+			ColxL := ""
+			ColxM := ""
+			ColxN := ""
+			ColxO := ""
+			ColxP := ""
+			ColxQ := ""
+			ColxR := ""
+			ColxS := ""
+			ColxT := ""
+			ColxU := ""
+			ColxV := ""
+			ColxW := ""
+			ColxX := ""
+			ColxY := ""
+			ColxZ := ""
+			ColxA1 := ""
+
+
+
+	}
+
+
+
+MsgBox, Done
+return

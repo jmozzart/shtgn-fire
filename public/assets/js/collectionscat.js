@@ -1,0 +1,7 @@
+let collectionstempString = ''
+
+  let collectionstempVal = basicproductdata.filter(val => val.collection.includes(colcatf))
+  collectionstempVal.slice(0,20).forEach((item) => {
+    collectionstempString += `<div class=\"col-md-4\">\n<div class=\"single-product-items\">\n<div class=\"product-item-image\">\n<a href=\"\/products\/${item.targeturl}\"><img loading=\"lazy\" src=\"\/assets\/images\/product\/${item.targeturl}\_m.webp\" alt=\"${item.producttitle}\"><\/a>\n<div class=\"${item.displaydiscountind} product-discount-tag\">\n<p>${item.discountprct}<\/p>\n<\/div>\n<\/div>\n<div class=\"product-item-content text-center mt-30\">\n<h5 class=\"product-title\"><a href=\"\/products\/${item.targeturl}\">${item.producttitle}<\/a><\/h5>\n<ul class=\"rating\">\n<li><i class=\"lni-${item.ratingstars[0]}\"><\/i><\/li>\n<li><i class=\"lni-${item.ratingstars[1]}\"><\/i><\/li>\n<li><i class=\"lni-${item.ratingstars[2]}\"><\/i><\/li>\n<li><i class=\"lni-${item.ratingstars[3]}\"><\/i><\/li>\n<li><i class=\"lni-${item.ratingstars[4]}\"><\/i><\/li>\n<\/ul>\n<span class=\"current-price\">₱${item.skucurrentprice[0]}<\/span>\n<span class=\"${item.displayoriginalprice[0]}\">₱${item.skuprice[0]}<\/span>\n<\/div>\n<\/div> \t\t\t\n<\/div>\n`
+  })
+  $('#collectionstemp').empty().append(collectionstempString)

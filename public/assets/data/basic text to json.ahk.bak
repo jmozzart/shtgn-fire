@@ -1,0 +1,423 @@
+Sleep 2000
+	
+	
+	Loop, read, productcards.txt
+			
+	{
+	
+			if (A_Index = 1)
+		continue
+		
+		Column1 := StrSplit(A_LoopReadLine, A_Tab).1
+		Column2 := StrSplit(A_LoopReadLine, A_Tab).2
+		Column3 := StrSplit(A_LoopReadLine, A_Tab).3
+		Column5 := StrSplit(A_LoopReadLine, A_Tab).5
+		Column6 := StrSplit(A_LoopReadLine, A_Tab).6
+		Column7 := StrSplit(A_LoopReadLine, A_Tab).7
+		Column8 := StrSplit(A_LoopReadLine, A_Tab).8
+		Column9 := StrSplit(A_LoopReadLine, A_Tab).9
+		Column10 := StrSplit(A_LoopReadLine, A_Tab).10
+		Column11 := StrSplit(A_LoopReadLine, A_Tab).11
+		Column12 := StrSplit(A_LoopReadLine, A_Tab).12
+		Column14 := StrSplit(A_LoopReadLine, A_Tab).14
+		Column16 := StrSplit(A_LoopReadLine, A_Tab).16
+		Column17 := StrSplit(A_LoopReadLine, A_Tab).17
+		Column18 := StrSplit(A_LoopReadLine, A_Tab).18
+		Column20 := StrSplit(A_LoopReadLine, A_Tab).20
+		Column21 := StrSplit(A_LoopReadLine, A_Tab).21
+		Column22 := StrSplit(A_LoopReadLine, A_Tab).22
+		Column23 := StrSplit(A_LoopReadLine, A_Tab).23
+		Column24 := StrSplit(A_LoopReadLine, A_Tab).24
+		Column25 := StrSplit(A_LoopReadLine, A_Tab).25
+		Column26 := StrSplit(A_LoopReadLine, A_Tab).26
+		Column27 := StrSplit(A_LoopReadLine, A_Tab).27
+		Column28 := StrSplit(A_LoopReadLine, A_Tab).28
+		Column29 := StrSplit(A_LoopReadLine, A_Tab).29
+		Column30 := StrSplit(A_LoopReadLine, A_Tab).30
+		Column31 := StrSplit(A_LoopReadLine, A_Tab).31
+		Column32 := StrSplit(A_LoopReadLine, A_Tab).32
+		Column33 := StrSplit(A_LoopReadLine, A_Tab).33
+		Column34 := StrSplit(A_LoopReadLine, A_Tab).34
+		Column35 := StrSplit(A_LoopReadLine, A_Tab).35
+		Column36 := StrSplit(A_LoopReadLine, A_Tab).36
+		Column37 := StrSplit(A_LoopReadLine, A_Tab).37
+		Column38 := StrSplit(A_LoopReadLine, A_Tab).38
+		Column39 := StrSplit(A_LoopReadLine, A_Tab).39
+		Column40 := StrSplit(A_LoopReadLine, A_Tab).40
+		Column41 := StrSplit(A_LoopReadLine, A_Tab).41
+		Column42 := StrSplit(A_LoopReadLine, A_Tab).42
+		Column43 := StrSplit(A_LoopReadLine, A_Tab).43
+		Column44 := StrSplit(A_LoopReadLine, A_Tab).44
+		Column45 := StrSplit(A_LoopReadLine, A_Tab).45
+		Column46 := StrSplit(A_LoopReadLine, A_Tab).46
+		Column47 := StrSplit(A_LoopReadLine, A_Tab).47
+		Column48 := StrSplit(A_LoopReadLine, A_Tab).48
+		Column49 := StrSplit(A_LoopReadLine, A_Tab).49
+		Column50 := StrSplit(A_LoopReadLine, A_Tab).50
+		Column51 := StrSplit(A_LoopReadLine, A_Tab).51
+		Column52 := StrSplit(A_LoopReadLine, A_Tab).52
+		Column53 := StrSplit(A_LoopReadLine, A_Tab).53
+		Column54 := StrSplit(A_LoopReadLine, A_Tab).54
+		Column55 := StrSplit(A_LoopReadLine, A_Tab).55
+		Column56 := StrSplit(A_LoopReadLine, A_Tab).56
+		Column57 := StrSplit(A_LoopReadLine, A_Tab).57
+		Column58 := StrSplit(A_LoopReadLine, A_Tab).58
+		Column59 := StrSplit(A_LoopReadLine, A_Tab).59
+		Column60 := StrSplit(A_LoopReadLine, A_Tab).60
+		Column61 := StrSplit(A_LoopReadLine, A_Tab).61
+		Column62 := StrSplit(A_LoopReadLine, A_Tab).62
+		Column63 := StrSplit(A_LoopReadLine, A_Tab).63
+		Column64 := StrSplit(A_LoopReadLine, A_Tab).64
+		Column65 := StrSplit(A_LoopReadLine, A_Tab).65
+		Column66 := StrSplit(A_LoopReadLine, A_Tab).66
+		Column67 := StrSplit(A_LoopReadLine, A_Tab).67
+		Column68 := StrSplit(A_LoopReadLine, A_Tab).68
+		Column69 := StrSplit(A_LoopReadLine, A_Tab).69
+		Column70 := StrSplit(A_LoopReadLine, A_Tab).70
+		Column71 := StrSplit(A_LoopReadLine, A_Tab).71
+		Column72 := StrSplit(A_LoopReadLine, A_Tab).72
+		Column73 := StrSplit(A_LoopReadLine, A_Tab).73
+		Column74 := StrSplit(A_LoopReadLine, A_Tab).74
+		Column75 := StrSplit(A_LoopReadLine, A_Tab).75
+		Column76 := StrSplit(A_LoopReadLine, A_Tab).76
+		Column77 := StrSplit(A_LoopReadLine, A_Tab).77
+		Column78 := StrSplit(A_LoopReadLine, A_Tab).78
+		Column79 := StrSplit(A_LoopReadLine, A_Tab).79
+		Column80 := StrSplit(A_LoopReadLine, A_Tab).80
+		
+		FileRead, gravyden, productcards-json-template.txt
+		
+		StringReplace, gravyden, gravyden, rplcproductID, %Column1%, All
+		StringReplace, gravyden, gravyden, rplcproducttitle, %Column2%, All
+		StringReplace, gravyden, gravyden, rplcname, %Column3%, All
+		StringReplace, gravyden, gravyden, rplctargeturl, %Column5%, All
+		StringReplace, gravyden, gravyden, rplcdisplaydiscountind, %Column6%, All
+		StringReplace, gravyden, gravyden, rplcdiscountprct, %Column7%, All
+		StringReplace, gravyden, gravyden, rplcstarfi1, %Column8%, All
+		StringReplace, gravyden, gravyden, rplcstarfi2, %Column9%, All
+		StringReplace, gravyden, gravyden, rplcstarfi3, %Column10%, All
+		StringReplace, gravyden, gravyden, rplcstarfi4, %Column11%, All
+		StringReplace, gravyden, gravyden, rplcstarfi5, %Column12%, All
+		StringReplace, gravyden, gravyden, rplccategory, %Column14%, All
+		StringReplace, gravyden, gravyden, rplccollection, %Column16%, All
+		StringReplace, gravyden, gravyden, rplcsales, %Column17%, All
+		StringReplace, gravyden, gravyden, rplcavailability, %Column18%, All
+		StringReplace, gravyden, gravyden, rplcSKUcomboName, %Column20%, All
+		if (Column21 = "") { 
+			StringReplace, gravyden, gravyden, rplcskuID01, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcskuID01, %Column21%, All 
+			}
+		if (Column22 = "") { 
+			StringReplace, gravyden, gravyden, rplcskuID02, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcskuID02, `,%A_Space%"%Column22%", All 
+			}
+		if (Column23 = "") { 
+			StringReplace, gravyden, gravyden, rplcskuID03, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcskuID03, `,%A_Space%"%Column23%", All 
+			}
+		if (Column24 = "") { 
+			StringReplace, gravyden, gravyden, rplcskuID04, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcskuID04, `,%A_Space%"%Column24%", All 
+			}
+		if (Column25 = "") { 
+			StringReplace, gravyden, gravyden, rplcskuID05, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcskuID05, `,%A_Space%"%Column25%", All 
+			}
+		if (Column26 = "") { 
+			StringReplace, gravyden, gravyden, rplcskuID06, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcskuID06, `,%A_Space%"%Column26%", All 
+			}
+		if (Column27 = "") { 
+			StringReplace, gravyden, gravyden, rplcskuID07, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcskuID07, `,%A_Space%"%Column27%", All 
+			}
+		if (Column28 = "") { 
+			StringReplace, gravyden, gravyden, rplcskuID08, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcskuID08, `,%A_Space%"%Column28%", All 
+			}
+		if (Column29 = "") { 
+			StringReplace, gravyden, gravyden, rplcskuID09, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcskuID09, `,%A_Space%"%Column29%", All 
+			}
+		if (Column30 = "") { 
+			StringReplace, gravyden, gravyden, rplcskuID10, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcskuID10, `,%A_Space%"%Column30%", All 
+			}
+		if (Column31 = "") { 
+			StringReplace, gravyden, gravyden, rplcskuID11, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcskuID11, `,%A_Space%"%Column31%", All 
+			}
+		if (Column32 = "") { 
+			StringReplace, gravyden, gravyden, rplcskuID12, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcskuID12, `,%A_Space%"%Column32%", All 
+			}
+		if (Column33 = "") { 
+			StringReplace, gravyden, gravyden, rplcSKUname01, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcSKUname01, %Column33%, All 
+			}
+		if (Column34 = "") { 
+			StringReplace, gravyden, gravyden, rplcSKUname02, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcSKUname02, `,%A_Space%"%Column34%", All 
+			}
+		if (Column35 = "") { 
+			StringReplace, gravyden, gravyden, rplcSKUname03, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcSKUname03, `,%A_Space%"%Column35%", All 
+			}
+		if (Column36 = "") { 
+			StringReplace, gravyden, gravyden, rplcSKUname04, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcSKUname04, `,%A_Space%"%Column36%", All 
+			}
+		if (Column37 = "") { 
+			StringReplace, gravyden, gravyden, rplcSKUname05, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcSKUname05, `,%A_Space%"%Column37%", All 
+			}
+		if (Column38 = "") { 
+			StringReplace, gravyden, gravyden, rplcSKUname06, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcSKUname06, `,%A_Space%"%Column38%", All 
+			}
+		if (Column39 = "") { 
+			StringReplace, gravyden, gravyden, rplcSKUname07, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcSKUname07, `,%A_Space%"%Column39%", All 
+			}
+		if (Column40 = "") { 
+			StringReplace, gravyden, gravyden, rplcSKUname08, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcSKUname08, `,%A_Space%"%Column40%", All 
+			}
+		if (Column41 = "") { 
+			StringReplace, gravyden, gravyden, rplcSKUname09, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcSKUname09, `,%A_Space%"%Column41%", All 
+			}
+		if (Column42 = "") { 
+			StringReplace, gravyden, gravyden, rplcSKUname10, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcSKUname10, `,%A_Space%"%Column42%", All 
+			}
+		if (Column43 = "") { 
+			StringReplace, gravyden, gravyden, rplcSKUname11, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcSKUname11, `,%A_Space%"%Column43%", All 
+			}
+		if (Column44 = "") { 
+			StringReplace, gravyden, gravyden, rplcSKUname12, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcSKUname12, `,%A_Space%"%Column44%", All 
+			}
+		if (Column45 = "") { 
+			StringReplace, gravyden, gravyden, rplcskuprice01, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcskuprice01, %Column45%, All 
+			}
+		if (Column46 = "") { 
+			StringReplace, gravyden, gravyden, rplcskuprice02, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcskuprice02, `,%A_Space%"%Column46%", All 
+			}
+		if (Column47 = "") { 
+			StringReplace, gravyden, gravyden, rplcskuprice03, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcskuprice03, `,%A_Space%"%Column47%", All 
+			}
+		if (Column48 = "") { 
+			StringReplace, gravyden, gravyden, rplcskuprice04, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcskuprice04, `,%A_Space%"%Column48%", All 
+			}
+		if (Column49 = "") { 
+			StringReplace, gravyden, gravyden, rplcskuprice05, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcskuprice05, `,%A_Space%"%Column49%", All 
+			}
+		if (Column50 = "") { 
+			StringReplace, gravyden, gravyden, rplcskuprice06, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcskuprice06, `,%A_Space%"%Column50%", All 
+			}
+		if (Column51 = "") { 
+			StringReplace, gravyden, gravyden, rplcskuprice07, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcskuprice07, `,%A_Space%"%Column51%", All 
+			}
+		if (Column52 = "") { 
+			StringReplace, gravyden, gravyden, rplcskuprice08, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcskuprice08, `,%A_Space%"%Column52%", All 
+			}
+		if (Column53 = "") { 
+			StringReplace, gravyden, gravyden, rplcskuprice09, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcskuprice09, `,%A_Space%"%Column53%", All 
+			}
+		if (Column54 = "") { 
+			StringReplace, gravyden, gravyden, rplcskuprice10, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcskuprice10, `,%A_Space%"%Column54%", All 
+			}
+		if (Column55 = "") { 
+			StringReplace, gravyden, gravyden, rplcskuprice11, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcskuprice11, `,%A_Space%"%Column55%", All 
+			}
+		if (Column56 = "") { 
+			StringReplace, gravyden, gravyden, rplcskuprice12, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcskuprice12, `,%A_Space%"%Column56%", All 
+			}
+		if (Column57 = "") { 
+			StringReplace, gravyden, gravyden, rplcskucurrentprice01, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcskucurrentprice01, %Column57%, All 
+			}
+		if (Column58 = "") { 
+			StringReplace, gravyden, gravyden, rplcskucurrentprice02, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcskucurrentprice02, `,%A_Space%"%Column58%", All 
+			}
+		if (Column59 = "") { 
+			StringReplace, gravyden, gravyden, rplcskucurrentprice03, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcskucurrentprice03, `,%A_Space%"%Column59%", All 
+			}
+		if (Column60 = "") { 
+			StringReplace, gravyden, gravyden, rplcskucurrentprice04, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcskucurrentprice04, `,%A_Space%"%Column60%", All 
+			}
+		if (Column61 = "") { 
+			StringReplace, gravyden, gravyden, rplcskucurrentprice05, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcskucurrentprice05, `,%A_Space%"%Column61%", All 
+			}
+		if (Column62 = "") { 
+			StringReplace, gravyden, gravyden, rplcskucurrentprice06, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcskucurrentprice06, `,%A_Space%"%Column62%", All 
+			}
+		if (Column63 = "") { 
+			StringReplace, gravyden, gravyden, rplcskucurrentprice07, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcskucurrentprice07, `,%A_Space%"%Column63%", All 
+			}
+		if (Column64 = "") { 
+			StringReplace, gravyden, gravyden, rplcskucurrentprice08, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcskucurrentprice08, `,%A_Space%"%Column64%", All 
+			}
+		if (Column65 = "") { 
+			StringReplace, gravyden, gravyden, rplcskucurrentprice09, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcskucurrentprice09, `,%A_Space%"%Column65%", All 
+			}
+		if (Column66 = "") { 
+			StringReplace, gravyden, gravyden, rplcskucurrentprice10, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcskucurrentprice10, `,%A_Space%"%Column66%", All 
+			}
+		if (Column67 = "") { 
+			StringReplace, gravyden, gravyden, rplcskucurrentprice11, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcskucurrentprice11, `,%A_Space%"%Column67%", All 
+			}
+		if (Column68 = "") { 
+			StringReplace, gravyden, gravyden, rplcskucurrentprice12, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcskucurrentprice12, `,%A_Space%"%Column68%", All 
+			}
+		if (Column69 = "") { 
+			StringReplace, gravyden, gravyden, rplcdisplayoriginalprice01, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcdisplayoriginalprice01, %Column69%, All 
+			}
+		if (Column70 = "") { 
+			StringReplace, gravyden, gravyden, rplcdisplayoriginalprice02, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcdisplayoriginalprice02, `,%A_Space%"%Column70%", All 
+			}
+		if (Column71 = "") { 
+			StringReplace, gravyden, gravyden, rplcdisplayoriginalprice03, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcdisplayoriginalprice03, `,%A_Space%"%Column71%", All 
+			}
+		if (Column72 = "") { 
+			StringReplace, gravyden, gravyden, rplcdisplayoriginalprice04, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcdisplayoriginalprice04, `,%A_Space%"%Column72%", All 
+			}
+		if (Column73 = "") { 
+			StringReplace, gravyden, gravyden, rplcdisplayoriginalprice05, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcdisplayoriginalprice05, `,%A_Space%"%Column73%", All 
+			}
+		if (Column74 = "") { 
+			StringReplace, gravyden, gravyden, rplcdisplayoriginalprice06, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcdisplayoriginalprice06, `,%A_Space%"%Column74%", All 
+			}
+		if (Column75 = "") { 
+			StringReplace, gravyden, gravyden, rplcdisplayoriginalprice07, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcdisplayoriginalprice07, `,%A_Space%"%Column75%", All 
+			}
+		if (Column76 = "") { 
+			StringReplace, gravyden, gravyden, rplcdisplayoriginalprice08, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcdisplayoriginalprice08, `,%A_Space%"%Column76%", All 
+			}
+		if (Column77 = "") { 
+			StringReplace, gravyden, gravyden, rplcdisplayoriginalprice09, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcdisplayoriginalprice09, `,%A_Space%"%Column77%", All 
+			}
+		if (Column78 = "") { 
+			StringReplace, gravyden, gravyden, rplcdisplayoriginalprice10, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcdisplayoriginalprice10, `,%A_Space%"%Column78%", All 
+			}
+		if (Column79 = "") { 
+			StringReplace, gravyden, gravyden, rplcdisplayoriginalprice11, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcdisplayoriginalprice11, `,%A_Space%"%Column79%", All 
+			}
+		if (Column80 = "") { 
+			StringReplace, gravyden, gravyden, rplcdisplayoriginalprice12, , All 
+			} else { 
+			StringReplace, gravyden, gravyden, rplcdisplayoriginalprice12, `,%A_Space%"%Column80%", All 
+			}
+
+
+
+	
+		Fileappend, %gravyden%, newproductcardsjson.txt
+		Sleep 500
+
+	}
+
+	
+
+
+
+Sleep 500
+
+
+MsgBox, Done
+return
